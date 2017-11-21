@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tambah Data</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+    <body>
+    <center><h1>Tambah Data</h1></center>
+    <center>
+        <form method="post" th:object="${surat}" th:action="@{/tambah}">
+        <table>
+            <tr>
+                <td>Id</td>
+                <td><input type="text" th:field="*{id}"/></td>
+            </tr>
+            <tr>
+                <td>Tanggal Surat</td>
+                <td><input type="text" th:field="*{tgl_surat}"/></td>
+            </tr>
+            <tr>
+                <td>Judul</td>
+                <td><input type="text" th:field="*{judul}"/></td>
+            </tr>
+            <tr>
+                <td>Tujuan</td>
+                <td><input type="text" th:field="*{tujuan}"/></td>
+            </tr>
+        </table>
+        <button type="submit">Simpan</button>
+    </form>
+    </center>
+        <center><a href="home.html">Kembali</a></center>        
+
+    </body>
+</html>
