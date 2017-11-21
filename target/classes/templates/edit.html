@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Edit Data Surat Keluar</title>
+    </head>
+    <body>
+    <center><h1>Edit Data Surat Keluar</h1></center>
+        <center><form method="post" th:object="${surat}" th:action="@{/edit}">
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" th:field="*{id}" /></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Surat</td>
+                    <td><input type="text" th:field="*{tgl_surat}" /></td>
+                </tr>
+                <tr>
+                    <td>Judul</td>
+                    <td><input type="text" th:field="*{judul}" /></td>
+                </tr>
+                <tr>
+                    <td>Tujuan</td>
+                    <td><input type="text" th:field="*{tujuan}" /></td>
+                </tr>
+            </table>
+            <button type="submit">Simpan</button>
+        </form></center>
+		
+    </body>
+</html>

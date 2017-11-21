@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Aplikasi Perekaman Surat Keluar</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <center><h1>Aplikasi Perekaman Surat Keluar</h1></center>           
+        <center><a href="tambah.html">Tambah Data</a><br/><br/></center>        
+            <center><table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tanggal Surat</th>
+                        <th>Judul</th>
+                        <th>Tujuan</th>
+                        <th>ACTION</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="surat : ${daftarSurat}">
+                        <td th:text="${surat.id}"></td>
+                        <td th:text="${surat.tgl_surat}"></td>
+                        <td th:text="${surat.judul}"></td>
+                        <td th:text="${surat.tujuan}"></td>
+                        <td><a th:href="@{/hapus(id=${surat.id})}">Delete</a> - 
+                            <a th:href="@{/edit(id=${surat.id})}">Edit</a></td>                        
+                    </tr>
+                </tbody>
+        </table></center>
+		
+    </body>
+</html>

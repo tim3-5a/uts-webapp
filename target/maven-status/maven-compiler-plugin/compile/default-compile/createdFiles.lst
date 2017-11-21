@@ -1,0 +1,4 @@
+lab\phb\webapp\entity\webapp.class
+lab\phb\webapp\repo\webappRepo.class
+lab\phb\webapp\controller\AppController.class
+lab\phb\webapp\WebappApplication.class
